@@ -1,0 +1,248 @@
+
+<html>
+<head>
+    <title>XXMusic World</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+     <link rel="stylesheet" href="MyMusic.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="popupWindow.css" rel="stylesheet" type="text/css">
+    <link href="header.css" rel="stylesheet">
+    <script defer src="/fontawesome-all.js"></script>
+    </head>
+<body>
+    <div id="page_wrap">
+   <!--Header Section-->
+    <header>
+    <div class="headerUp">
+     <div class="logo"></div>
+       <nav>
+        <ul>
+        <li><a href="index.html" class="nav_item">Explore</a></li>
+       <li><a href="MyMusic.html" class="nav_item">My Music</a></li>
+        <li><a href="about.html" class="nav_item">About</a></li>
+        </ul>
+        </nav>
+    
+         <div class="divider"></div>
+        <div class="search_rec"> 
+            <input type="text" class="searchInput">
+            <button type="submit" class="searchButton"><i class="fas fa-search fa-lg"></i></button>
+            </div>
+      
+        <div id="account" onclick="displayForm()"><i class="fas fa-user fa-2x user-circle"></i></div>
+    </div>
+        
+   
+     <!-- player -->  
+     <div class="player">
+     <button id="pre_music"><i class="fas fa-step-backward"></i></button>
+     <button id="play_music" onclick="playMusic()"><span class="icon_change player_play_icon">&#9658;</span></button>
+     <button id="next_music"><i class="fas fa-step-forward"></i></button>   
+     <div id="seekBar">
+        <div id="fill"></div>
+        <div id="handle"></div>
+         </div>
+    <span id="music_current_time"></span>
+     <div id="player_songTitle"></div>
+    <button id="add_to_playlist" onclick="addtoPlaylist()"><i class="far fa-plus-square"></i></button>
+     
+        </div>
+        
+  
+        </header>  
+    <!--Main Content Section-->
+    <div class="my_play_lists">
+    <div class="my_play_lists_title section_title" >My Play List</div>
+    <div class="my_play_list_content">
+    <div class="play_list_album">
+        
+        <button class="album_back"  id="study_music_play" onclick="playMusicList_study()">&#9658;</button>
+      
+        <a href="Myplaylist.html" class="album_name">Study Music</a>
+        </div>
+        
+        <div class="play_list_album">
+            <button class="album_back" id="drive_music_play" onclick="playMusicList_drive()">&#9658;</button>
+      
+        <span class="album_name">Drive Music</span>
+        </div>
+         <div class="play_list_album">
+              <button class="album_back" id="cook_music_play" onclick="playMusicList_cook()">&#9658;</button>
+      
+        <span class="album_name">Study Music</span>
+        </div>
+         <div class="play_list_album">
+              <button class="album_back" id="" onclick="playMusicList_drive()">&#9658;</button>
+      
+        <span class="album_name">Study Music</span>
+        </div>
+         <div class="play_list_album">
+              <button class="album_back" id="" onclick="playMusicList_drive()">&#9658;</button>
+      
+        <span class="album_name">Study Music</span>
+        </div>
+         <div class="play_list_album">
+              <button class="album_back" id="" onclick="playMusicList_drive()">&#9658;</button>
+      
+        <span class="album_name">Study Music</span>
+        </div>
+         <div class="play_list_album">
+              <button class="album_back" id="" onclick="playMusicList_drive()">&#9658;</button>
+      
+        <span class="album_name">Study Music</span>
+        </div>
+         <div class="play_list_album">
+              <button class="album_back" id="" onclick="playMusicList_drive()">&#9658;</button>
+      
+        <span class="album_name">Study Music</span>
+        </div>
+        <div class="add_new_album">
+        <button class="add_new_btn" type="button"></button>
+        </div>
+        
+     
+        </div>
+    </div>
+    <footer>
+    </footer>
+    </div>
+    
+     <!--Modals-->
+    
+     <!--Sign in/Sign up-->   
+   <div id="show_log_form" class="popup_window">
+       
+<div id="popup_signin" class="form_style form_right">
+        <div class="popup_content">
+         <h4>Sign in</h4>
+          <div class="singnin_content popup_main_content">
+           <form class="registrition_form" id="singUp_registrition_form" method="get"> 
+               <fieldset>
+              <input class="input_style" name="e-mail" placeholder="E-mail Address" id="e-mail" type="text" >
+              <input class="input_style" name="password" placeholder="Password" id="password" type="password">
+               </fieldset>
+                <input id="signIn_submit_btn" class="submit_btn" type="submit" value="Sign in">
+               
+                   </form>
+            
+             <button onclick="hideForm()" class="cancel_btn">Cancel</button>
+              <a id="forget_pass">Forget Password?</a>
+            </div>
+        </div>
+        </div>
+        
+     
+        <div id="popup_signup" class="form_style form_left">
+        <div class="popup_content">
+         <h4>Sign up</h4>
+          <div class="content">
+           <form class="registrition_form" id="singIn_registrition_form" method="get"> 
+               <fieldset>
+              <input class="input_style" name="e-mail" placeholder="E-mail Address" id="singUp_e-mail" type="text">
+              <input class="input_style" name="password" placeholder="Password" id="singUp_password" type="password">
+             <input class="input_style" name="password" placeholder="Confirm Password" id="singUp_password_confirm" type="password">
+               </fieldset>
+                <input id="signUp_submit_btn" class="submit_btn" type="submit" value="Sign up">
+               
+                   </form>
+              <button onclick="hideForm()" class="cancel_btn">Cancel</button>
+            </div>
+        </div>
+        </div>
+     <div id="move_img">
+    <div id="signup_caption">
+    <button class="log_btn" onclick="moveImgLeft()"><span id="log_btn_signup">Sign Up</span></button>
+         </div>
+         
+    <div id="signin_caption">
+    <button class="log_btn" onclick="moveImgRight()"><span id="log_btn_signin" class="">Sign In</span></button>
+         </div>
+    </div>
+    </div>
+    
+     <!-- add to playlist-->
+           <div id="add_to_playlist_popup" class="popup_window">
+         <div class="popup_window_title">
+          <h4>Add to Playlist</h4>
+           </div>
+             <div class="playlist_content">
+             
+              <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                  <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 
+             </div>
+             <button class="confirm">Confirm</button>
+            <button class="cancel" onclick="hideaddtoPlaylist()">Cancel</button>
+        </div>
+    
+    <!--create new playlist-->
+        <div id="add_new_popup_window" class="popup_window">
+         <div class="popup_content">
+          <h4>Add to Playlist</h4>
+          <a class="close_btn" href="#"><i class="fas fa-times fa-2x"></i></a>
+           </div>
+             <div class="popup_main_content">
+              <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                  <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+             </div>
+           
+        </div>
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="playlist.js"></script>
+    <script src="popup.js"></script>
+    </body>
+</html>

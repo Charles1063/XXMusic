@@ -1,0 +1,251 @@
+#page_wrap{
+    margin:0;
+}
+/*sign in/sign up*/
+.popup_window{
+  position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:700px;
+    height:400px;
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+     box-shadow:2px 2px 10px gray;
+    opacity:0;
+    z-index: 1;  
+    pointer-events: none;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+.popup_window_open{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:700px;
+    height:400px;
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+     box-shadow:2px 2px 10px gray;
+    opacity:1;
+       z-index: 1;
+     pointer-events: auto;
+     font-family: 'Open Sans', sans-serif;
+}
+.popup_open_page_wrap{
+      -webkit-filter: blur(5px) grayscale(50%);
+}
+#page_wrap, .popup_window{
+    transition: all 0.5s ease;
+}
+.popup_content h4{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.form_style{
+    position: relative;
+    width:50%;
+    height:100%;
+}
+
+.registrition_form{  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:relative;
+    top:-25px;
+    
+}
+fieldset{
+    border:none;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+   
+}
+.input_style{
+    height:40px;
+    width:70%;
+    margin:auto;
+    margin-top: 15px;
+    border:none;
+    border-bottom:1px solid grey;
+   
+    font-weight:100px;
+}
+input{
+     font-family: 'Open Sans', sans-serif;
+    font-size:10px;
+}
+.submit_btn,.cancel_btn,.log_btn{
+    width:60%;
+    height:30px;
+    border-radius: 15px;
+    border:1px solid #E7B0B3;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.submit_btn{
+
+    border:none;
+    background-color: #E7B0B3;
+    color:white;
+    margin:auto;
+    margin-top: 30px;
+    font-size: 12px;
+}
+.cancel_btn{
+    position:absolute;
+    background-color: white;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: -15px;
+    font-size: 12px;
+    color: #E7B0B3;
+}
+#forget_pass{
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 35px;
+    font-size:10px;
+    color:grey;
+    font-weight: 100;
+}
+#move_img{
+    position: absolute;
+    right:0px;
+     width:50%;
+    height:100%;
+    background:url("/img/sign%20up%20form.png");
+    background-size: cover;
+}
+.move_right{
+    position: absolute;
+    right:0px;
+    width:50%;
+    height:100%;
+    background:url("/img/sign%20up%20form.png");
+    background-size: cover;
+     animation:moveRight 1s; 
+}
+@keyframes moveRight{
+    0%{
+       left:0px; 
+    }
+    70%{
+      right:-18px; 
+    }
+    100%{
+        right:0px;
+    }
+}
+
+.move_left{
+    position: absolute;
+    left:0px;
+     width:50%;
+    height:100%;
+    background:url("/img/sign%20up%20form.png");
+    background-size: cover;
+    animation:moveLeft 1s; 
+     
+}
+@keyframes moveLeft{
+    0%{
+       right:0px; 
+    }
+    70%{
+       left:-18px; 
+    }
+    100%{
+        left:0px;
+    }
+}
+#signin_caption{
+    visibility: hidden;
+ 
+}
+.log_btn{
+    position:absolute;
+    top:87%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: none;
+    color:#E7B0B3;
+    font-size: 12px;
+}
+.signup_showText{
+    transition-delay: 0.3s;
+  
+}
+
+/*add to play list*/
+#add_to_playlist_popup{
+    flex-direction: column; 
+    height:420px;
+    width:650px;
+    overflow: hidden; 
+}
+.popup_window_title{
+    width:100%;
+    text-align: center;
+    border-bottom: 1px solid #E7B0B3;  
+    margin:0px;
+    font-size: 22px;
+    padding:15px 0px 15px 0px;
+    color:#E7B0B3;
+    font-weight: 100;
+}
+
+.playlist_content{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    padding:30px 30px 0px 30px;
+}
+.popup_album{
+    width:65px;
+    height:65px;
+    background:url(/img/poster6.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;  
+   
+}
+.play_list_albums{
+    display:flex;
+    flex-direction: column;
+    margin:5px 25px 15px 25px; 
+}
+.popup_album_name{
+    margin-top: 5px;
+    font-size: 12px;
+    font-weight: 300;
+}
+.confirm, .cancel{
+    height:30px;
+    width:100px;
+    border-radius: 15px;
+    border:1px solid #E7B0B3;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 200;
+    bottom:40px;
+    position: absolute;
+}
+.confirm{
+
+    background-color:#E7B0B3;
+    color:white;
+    right:170px;
+}
+.cancel{
+    color:#E7B0B3;
+    right:50px;
+}

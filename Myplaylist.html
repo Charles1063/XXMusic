@@ -1,0 +1,248 @@
+<html>
+<head>
+    <title>XXMusic World</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="stylesheet" href="Myplaylist.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="popupWindow.css" rel="stylesheet" type="text/css">
+    <link href="header.css" rel="stylesheet">
+   
+    </head>
+<body>
+    <div id="page_wrap">
+    <!--Header Section-->
+    
+    <header id="insertHeader">
+
+    <div class="headerUp">
+     <div class="logo"></div>
+     <nav>
+        <ul>
+        <li><a href="index.html" class="nav_item">Explore</a></li>
+       <li><a href="MyMusic.html" class="nav_item">My Music</a></li>
+        <li><a href="about.html" class="nav_item">About</a></li>
+        </ul>
+        </nav>
+    
+         <div class="divider"></div>
+        <div class="search_rec"> 
+            <input type="text" class="searchInput">
+            <button type="submit" class="searchButton"><i class="fas fa-search fa-lg"></i></button>
+            </div>
+      
+     <div id="account" onclick="displayForm()"><i class="fas fa-user fa-2x user-circle"></i></div>
+    </div>
+        
+   
+ <!--player-->
+     <div class="player">
+     <button id="pre_music"><i class="fas fa-step-backward"></i></button>
+     <button id="play_music" onclick="playMusic()"><span class="icon_change player_play_icon">&#9658;</span></button>
+     <button id="next_music"><i class="fas fa-step-forward"></i></button> 
+     <div id="seekBar">
+        <div id="fill"></div>
+        <div id="handle"></div>
+         </div>
+    <span id="music_current_time"></span>  
+     <div id="player_songTitle"></div>
+    <button id="add_to_playlist" onclick="addtoPlaylist()"><i class="far fa-plus-square"></i></button>
+       </div>
+        </header>  
+    
+    <!-- Main Content-->
+    <div class="main_content">
+    <a href="MyMusic.html"><div class="section_title playlist_title">My Play Lists</div></a>
+     <div class="album_cover">
+       <div class="album_img"></div>
+       <div class="my_album_info">
+         <div class="info_content info_top">
+           <div class="album_text">
+             <h3>Study Music</h3>
+             <span class="created_time">Created Time:01/01/2018</span>
+           </div>
+         </div>
+         <div class="info_content info_bottom">
+             <div class="album_btns">
+               <div id="play_all" onclick="playMusicList()"><i class="far fa-play-circle fa-lg play_all_icon"></i><span>Play All</span></div>
+               <div id="delete_all"><i class="fas fa-trash-alt fa-lg delete_all_icon"></i><span>Delete All</span></div>
+             </div>
+         </div>
+      </div>
+     </div>
+     <div class="album_songs">
+        <ul>
+        <li><div class="song_items">
+         <i class="far fa-play-circle song_items_play"></i>
+          <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+           
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+            
+        <li><div class="song_items">
+          <i class="far fa-play-circle song_items_play"></i>
+          <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+          
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+            
+            <li><div class="song_items">
+          <i class="far fa-play-circle song_items_play"></i>
+          <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+            
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+            
+            <li><div class="song_items">
+         <i class="far fa-play-circle song_items_play"></i>
+          <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+            
+            <li><div class="song_items">
+          <i class="far fa-play-circle song_items_play"></i>
+           <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+            
+            <li><div class="song_items">
+          <i class="far fa-play-circle song_items_play"></i>
+          <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+            
+            <li><div class="song_items">
+         <i class="far fa-play-circle song_items_play"></i>
+          <span class="song_items_name">Rolling in the Deep</span>
+           <span class="song_items_singer">Adele</span>
+           <span class="song_items_time">05:00</span>
+            <i class="fas fa-trash-alt song_items_delete"></i>
+             </div>
+            </li> 
+         </ul>
+         
+        
+     </div>
+        </div>
+    <!--Footer Section-->
+     <footer>
+    </footer>
+    </div>
+    
+  
+    <!--Modals-->
+    
+     <!--Sign in/Sign up-->   
+   <div id="show_log_form" class="popup_window">
+       
+<div id="popup_signin" class="form_style form_right">
+        <div class="popup_content">
+         <h4>Sign in</h4>
+          <div class="singnin_content popup_main_content">
+           <form class="registrition_form" id="singUp_registrition_form" method="get"> 
+               <fieldset>
+              <input class="input_style" name="e-mail" placeholder="E-mail Address" id="e-mail" type="text" >
+              <input class="input_style" name="password" placeholder="Password" id="password" type="password">
+               </fieldset>
+                <input id="signIn_submit_btn" class="submit_btn" type="submit" value="Sign in">
+               
+                   </form>
+            
+             <button onclick="hideForm()" class="cancel_btn">Cancel</button>
+            <a id="forget_pass">Forget Password?</a>
+            </div>
+        </div>
+        </div>
+        
+     
+        <div id="popup_signup" class="form_style form_left">
+        <div class="popup_content">
+         <h4>Sign up</h4>
+          <div class="content">
+           <form class="registrition_form" id="singIn_registrition_form" method="get"> 
+               <fieldset>
+              <input class="input_style" name="e-mail" placeholder="E-mail Address" id="singUp_e-mail" type="text">
+              <input class="input_style" name="password" placeholder="Password" id="singUp_password" type="password">
+             <input class="input_style" name="password" placeholder="Confirm Password" id="singUp_password_confirm" type="password">
+               </fieldset>
+                <input id="signUp_submit_btn" class="submit_btn" type="submit" value="Sign up">
+               
+                   </form>
+              <button onclick="hideForm()" class="cancel_btn">Cancel</button>
+            </div>
+        </div>
+        </div>
+     <div id="move_img">
+    <div id="signup_caption">
+    <button class="log_btn" onclick="moveImgLeft()"><span id="log_btn_signup">Sign Up</span></button>
+         </div>
+         
+    <div id="signin_caption">
+    <button class="log_btn" onclick="moveImgRight()"><span id="log_btn_signin" class="">Sign In</span></button>
+         </div>
+    </div>
+    </div>
+    
+     <!-- add to playlist-->
+           <div id="add_to_playlist_popup" class="popup_window">
+          <h4 class="popup_window_title">Add to Playlist</h4>
+             <div class="playlist_content">
+             
+              <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                  <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 
+             </div>
+             <button class="confirm">Confirm</button>
+            <button class="cancel" onclick="hideaddtoPlaylist()">Cancel</button>
+        </div>
+    
+    <script src="index.js"></script>
+    <script src="popup.js"></script>
+    <script src="Myplaylist.js"></script>
+     <script defer src="/fontawesome-all.js"></script>
+    </body>
+</html>

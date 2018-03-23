@@ -1,0 +1,136 @@
+
+.my_play_lists{
+    padding-top:220px;
+}
+.my_play_list_content{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:20px 30px 20px 30px;
+    margin:auto;
+    justify-content:flex-start;
+}
+.play_list_album{
+    width:260px;
+    height:300px;
+   background: none;
+    border:none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    transition:0.5s linear;
+    
+}
+.play_list_album::after{
+    content:"";
+     width:260px;
+    height:300px;
+   background: url("/img/album_back.png") no-repeat center center;
+    z-index: -1;
+    position:absolute;
+    opacity:0;
+    transition:0.4s;
+    z-index: -2;
+    border:none;
+    box-shadow: 2px 2px 5px 2px #979797;
+}
+.play_list_album:hover:after{
+    
+     opacity:1;
+    
+   
+}
+.play_list_album:hover .album_back{
+     box-shadow: 1px 1px 5px 2px #505862;
+}  
+.album_back{
+    background:none;
+    background-size: cover;  
+    width:130px;
+    height:130px;
+    border-radius: 50%;
+    border:none; 
+    box-shadow: none;
+    overflow: hidden;
+    position: absolute;
+    align-self: center;
+    font-size: 53px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.album_back::after{
+    background:url(/img/poster6.jpg) no-repeat center center;
+    background-size: cover; 
+    content:"";
+    border:none;
+    width:130px;
+    height:130px;
+    position:absolute;
+   left:0px;
+    top:0px;
+ z-index:-1;
+    transition:0.3s;
+ 
+}
+.album_back:hover:after{
+     
+     transform: scale(1.1);
+  
+}
+
+.play_icon{
+    color: white;
+    cursor:pointer;
+   transition:0.3s;
+}
+.album_back:hover .play_icon{
+    transform: scale(1.1);
+}
+.add_new_album{
+    background:none;
+    width:260px;
+    height:300px;
+   background: none;
+    border:none;
+    display:flex;
+    transition:0.5s linear;
+    justify-content: center;
+    
+}
+.add_new_btn{
+     width:130px;
+    height:130px;
+    border-radius: 50%;
+    border:1px solid #D09295;
+     cursor:pointer;
+   position: relative;
+    margin-top:80px;
+    
+}
+.add_new_btn::before, .add_new_btn::after{
+    content:"";
+    height:70px;
+    width:1px;
+    background-color: #D09295;
+    position: absolute;
+    top:30px;
+}
+
+.add_new_btn::after{
+    transform:rotate(90deg);
+}
+.add_new_btn:hover{
+    transform: scale(1.05);
+}
+.album_name{
+    position:relative;
+    top:100;
+    align-self: center;
+    color:black;
+    
+}
+.album_name:hover{
+    color:white;
+}
+

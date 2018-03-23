@@ -1,0 +1,431 @@
+
+<html>
+<head>
+    <title>XXMusic World</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="MyMusic.css" rel="stylesheet">
+    <link href="popupWindow.css" rel="stylesheet">
+    <link href="header.css" rel="stylesheet">
+    <script defer src="/fontawesome-all.js"></script>
+    </head>
+<body>
+    <div id="page_wrap">
+    <!--Header Section-->
+    
+    <header id="insertHeader">
+
+    <div class="headerUp">
+     <div class="logo"></div>
+     <nav>
+        <ul>
+        <li><a href="index.html" class="nav_item">EXPLORE</a></li>
+       <li><a href="MyMusic.html" class="nav_item">MY MUSIC</a></li>
+        <li><a href="about.html" class="nav_item">ABOUT</a></li>
+        </ul>
+        </nav>
+    
+         <div class="divider"></div>
+        <div class="search_rec"> 
+            <input type="text" class="searchInput">
+            <button type="submit" class="searchButton"><i class="fas fa-search fa-lg"></i></button>
+            </div>
+      
+     <div id="account" onclick="displayForm()"><i class="fas fa-user fa-2x user-circle"></i></div>
+    </div>
+        
+   
+ <!--player-->
+     <div class="player">
+     <button id="pre_music"><i class="fas fa-step-backward"></i></button>
+     <button id="play_music" onclick="playMusic()"><span class="icon_change player_play_icon">&#9658;</span></button>
+     <button id="next_music"><i class="fas fa-step-forward"></i></button> 
+     <div id="seekBar">
+        <div id="fill"></div>
+        <div id="handle"></div>
+         </div>
+    <span id="music_current_time"></span>  
+     <div id="player_songTitle"></div>
+    <button id="add_to_playlist" onclick="addtoPlaylist()"><i class="far fa-plus-square"></i></button>
+     
+        </div>
+        
+
+        </header>  
+    <!--Main Content Section-->
+    <div class="HomePage_mainContent">
+        
+        <!-- slideShow-->
+     <div class="slideShow">
+    <div class="slide_container">
+  
+        <img class="slide_img fade" src="/img/poster3.jpg" >
+        </div>
+ 
+<div class="slide_container">
+ <img class="slide_img fade" src="/img/poster1.jpg">
+        </div>
+ 
+    
+    <div class="slide_container">
+       
+        <img class="slide_img fade" src="/img/poster2.jpg">
+    
+        </div>
+
+        <btn class="arrow_back" onclick="changeImg(-1)" ><a class="prev">&#10094;</a></btn>
+        <btn class="arrow_back back_next" onclick="changeImg(1)"><a class="next">&#10095;</a></btn>
+        
+        <div class="slide_dots"> 
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+       </div> 
+        
+     <div class="newSection">
+        <div class="section_title">New</div>
+        <div class="new_songs">
+            
+            <div class="music_list">
+            <div class="new_musicTypes">R&B</div>
+            <div class="rb_list">
+              <div class="song_box">
+                <audio id="A-Sky-Full-Of-Stars" src="/mp3/A-Sky-Full-Of-Stars.mp3"></audio>
+                
+                  <div class="new_img_back">
+                  <img class="song_img" src="img/poster6.jpg">
+                  <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                  <div class="song_box">
+                  <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                 <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                
+                <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                
+                
+                 </div>
+            </div>
+            
+            
+            <div class="music_list">
+            <div class="new_musicTypes">R&B</div>
+            <div class="rb_list">
+                <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                <div class="song_box">
+               <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                
+                <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                 </div>
+            </div>
+            
+            <div class="new_country music_list">
+            <div class="new_musicTypes">R&B</div>
+            <div class="rb_list">
+                <div class="song_box">
+               <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                <div class="song_box">
+               <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                
+                <div class="song_box">
+                <div class="new_img_back">
+                  <img class="song_img" src="/img/poster6.jpg">
+                   <button class="new_play_btn" onclick="playMusic()"><span class="new_play_icon icon_change">&#9658;</span></button>
+                  </div>
+                  <div class="song_info">
+                  <span class="song_name">Rolling in the Deep
+                  </span>
+                        <span class="song_singer">Adele</span>
+                      </div>
+               <span class="song_time">04:55
+                  </span>
+               
+                </div>
+                 </div>
+            </div>
+         </div>
+        
+        </div>
+     <div class="topSection">
+        <div class="section_title">Top</div>
+        <div class="top_content">
+        <div class= "top_song_item top_1">
+            <div class="top_song_item_content">
+            <img src="/img/poster5.jpg">
+            <div class="caption">
+                <div class="top_description">
+                <h3>Huo Yuan Jia</h3>
+                <p>The textContent property sets or returns the textual content of the specified node, and all its descendants. If you set the textContent property, any child nodes are removed and replaced by a single Text node containing the specified string. </p>
+                </div>
+                </div>
+            </div>
+            </div>  
+            
+        <div class= "top_song_item top_2">
+            <div class="top_song_item_content">
+            <img src="/img/poster6.jpg">
+            <div class="caption">
+                <div class="top_description">
+                <h3>Blue Moon</h3>
+                <p>The textContent property sets or returns the textual content of the specified node, and all its descendants. If you set the textContent property, any child nodes are removed and replaced by a single Text node containing the specified string. </p>
+                </div>
+                </div>
+            </div>
+            </div>  
+            
+            <div class= "top_song_item top_3">
+            <div class="top_song_item_content">
+            <img src="/img/poster4.jpg">
+            <div class="caption"> 
+                <div class="top_description">
+                <h3>Qing Hua Ci</h3>
+                <p>The textContent property sets or returns the textual content of the specified node, and all its descendants. If you set the textContent property, any child nodes are removed and replaced by a single Text node containing the specified string. </p>
+                </div>
+                </div>
+            </div>
+            </div>  
+        
+        </div>
+    </div>
+        </div>
+    
+         <footer>
+    </footer>
+        </div>
+    <!--Modals-->
+    
+     <!--Sign in/Sign up-->   
+   <div id="show_log_form" class="popup_window">
+       
+<div id="popup_signin" class="form_style form_right">
+        <div class="popup_content">
+         <h4>Sign in</h4>
+          <div class="singnin_content popup_main_content">
+           <form class="registrition_form" id="singUp_registrition_form" method="POST" action="signin.php"> 
+               <fieldset>
+              <input class="input_style" name="e-mail" placeholder="E-mail Address" id="e-mail" type="text" >
+              <input class="input_style" name="password" placeholder="Password" id="password" type="password">
+               </fieldset>
+               <button id="signIn_submit_btn" class="submit_btn" type="submit" name = "signin">Sign in</button>
+               
+                   </form>
+             <button onclick="hideForm()" class="cancel_btn">Cancel</button>
+            <a id="forget_pass">Forget Password?</a>
+            </div>
+        </div>
+        </div>
+        
+     
+        <div id="popup_signup" class="form_style form_left">
+        <div class="popup_content">
+         <h4>Sign up</h4>
+          <div class="content">
+           <form class="registrition_form" id="singIn_registrition_form" method="POST" action="signup.php"> 
+               <fieldset>
+              <input class="input_style" name="e-mail" placeholder="E-mail Address" id="singUp_e-mail" type="text">
+              <input class="input_style" name="password" placeholder="Password" id="singUp_password" type="password">
+             <input class="input_style" name="re_password" placeholder="Confirm Password" id="singUp_password_confirm" type="password">
+               </fieldset>
+               <button id="signUp_submit_btn" class="submit_btn" type="submit" name = "signup">Sign up</button>
+               
+                   </form>
+              <button onclick="hideForm()" class="cancel_btn">Cancel</button>
+            </div>
+        </div>
+        </div>
+     <div id="move_img">
+    <div id="signup_caption">
+    <button class="log_btn" onclick="moveImgLeft()"><span id="log_btn_signup">Sign Up</span></button>
+         </div>
+         
+    <div id="signin_caption">
+    <button class="log_btn" onclick="moveImgRight()"><span id="log_btn_signin" class="">Sign In</span></button>
+         </div>
+    </div>
+    </div>
+    
+     <!-- add to playlist-->
+           <div id="add_to_playlist_popup" class="popup_window">
+         <div class="popup_window_title">
+          <h4>Add to Playlist</h4>
+           </div>
+             <div class="playlist_content">
+             
+              <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                  <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                <div class="play_list_albums">
+                <button class="popup_album"></button>
+                  <span class="popup_album_name">Study Music</span>
+                 </div>
+                 
+             </div>
+             <button class="confirm">Confirm</button>
+            <button class="cancel" onclick="hideaddtoPlaylist()">Cancel</button>
+        </div>
+   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+        <script src="popup.js"></script>
+    </body>
+</html>
